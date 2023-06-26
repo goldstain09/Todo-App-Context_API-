@@ -22,11 +22,13 @@ const todoReducer = (state, action) => {
             dataaa = value
             localStorage.setItem('todosLists', JSON.stringify(dataaa));
             return [...dataaa]
+
+            
+        default:
+            return state;
     }
-    return state;
 }
 
 export default todoReducer;
 
 
- 

@@ -15,10 +15,10 @@ export default function Input() {
 
     const addInputData = () => {
         if (inputData.length > 0) {
-            if(cntxt.Edit_is){
+            if (cntxt.Edit_is) {
                 cntxt.updateTodo(inputData, cntxt.DataForEdit.unique_ID);
-            }else{
-                cntxt.addTodo(inputData); 
+            } else {
+                cntxt.addTodo(inputData);
             }
         } else {
             setEmptyError(true)
@@ -28,12 +28,12 @@ export default function Input() {
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
         setInputData(cntxt.DataForEdit.item)
-    }, [cntxt.Edit_is,cntxt.DataForEdit.item , cntxt.DataForEdit.unique_ID])
+    }, [cntxt.Edit_is, cntxt.DataForEdit.item, cntxt.DataForEdit.unique_ID])
 
     return (
-        <>
+        <div>
             <div className={emptyError ? 'Input_Div_forError d-flex align-content-center' : 'Input_Div d-flex align-content-center'}>
 
                 <input
@@ -46,10 +46,10 @@ export default function Input() {
                         setInputData(event.target.value);
                     }}
                     // both are same I used two times bcz of learning purpose...
-                    onInput={()=>{
+                    onInput={() => {
                         setEmptyError(false);
-                    }}/>
-                <button onClick={addInputData} className='Add_btn'><i className={ cntxt.Edit_is ? 'bi bi-journal-arrow-up':'bi bi-plus-square'}></i></button>
+                    }} />
+                <button onClick={addInputData} className='Add_btn'><i className={cntxt.Edit_is ? 'bi bi-journal-arrow-up' : 'bi bi-plus-square'}></i></button>
 
             </div>
             {
@@ -60,6 +60,6 @@ export default function Input() {
                 )
             }
 
-        </>
+        </div>
     )
 }
