@@ -1,0 +1,155 @@
+
+/* -------------------------------Scroll Bar------------------------------- */
+/* ------------------------------------------------------------------------ */
+::-webkit-scrollbar{display: none;}
+::-webkit-scrollbar-button{ display: none;}
+::-webkit-scrollbar-thumb{  display: none;}
+::-webkit-scrollbar-track{ display: none;}
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+/* Todo Home */
+.container-fluid{
+    height: auto;
+    box-sizing: border-box;
+    background:url('./Images/To-do-bg.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height:auto;
+    min-height: 60rem;
+}
+.row{
+    padding-top: 10rem;
+}
+
+/* Input */
+.Input_Div{
+    border-radius: 10px;
+    padding: 1.5rem 4%;
+    width: 100%;
+    height: 6rem;
+    background: rgba(0, 0, 0, 0.395);
+    backdrop-filter: blur(6px);margin-bottom: 3rem;
+}
+.Input_Div_forError{
+    border-radius: 10px;
+    padding: 1.5rem 4%;
+    width: 100%;
+    height: 6rem;
+    background: rgba(0, 0, 0, 0.395);
+    border: 2px solid red;
+    backdrop-filter: blur(6px);margin-bottom: 3rem;
+}
+.error_Div p{
+    font-size: 1.5rem;
+    position: relative;
+    font-family: 'Shadows Into Light', cursive;
+    top: -2rem;
+}
+.Todo_input{
+    font-family: 'Lobster', cursive;
+    outline: none;
+    width: 95%;
+    margin-right: 2%;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: rgb(62, 62, 62);
+}
+.Add_btn{
+    color: rgb(255, 255, 255);
+    width: 5%!important;
+    height: 3rem;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0!important;
+    padding: 0!important; 
+}
+.Add_btn:hover{
+    color: rgb(101, 101, 101);
+    transform: scale(1.01);
+    transition: all .3s;
+    text-shadow: 2px 2px 3px white;
+}
+.Add_btn i{
+    position: relative;
+    top: -1rem;
+    font-size: 3rem;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+/* Loading */
+.loading strong{
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
+    color: rgb(114, 114, 114);
+}
+.loading .spinner-grow{
+    font-size: 3.5rem!important;
+}
+
+
+/* Lists */
+.Todo_List{ 
+    margin-top: 1rem;
+    width: 100%;
+    height:auto;
+    padding: 1rem .5rem;
+    background: #0000009a;
+    color: white;
+    border-radius: 10px;
+}
+.Todo_List:hover{
+     transform: scale(1.006);
+     transition: all .2s;
+}
+.Image_Todolist{
+    width: 45px;
+    height: 45px;
+}
+.Todo_List p{
+    font-size: 2rem;
+    margin: 0!important;
+    font-family: 'Shadows Into Light', cursive;
+}
+.edit_btn{
+    border: none;
+    background: none;
+    font-size: 2rem;
+}
+.edit_btn i:hover{
+    color: rgb(255, 255, 255)!important;
+    transform: scale(1.1);
+    transition: all .3s;
+    text-shadow: 2px 2px 2px rgb(255, 215, 15);
+}
+.delete_btn{
+    font-size: 2rem;
+    border: none;
+    background: none;
+}
+.delete_btn i:hover{
+    color: rgb(255, 255, 255)!important;
+    transform: scale(1.1);
+    transition: all .3s;
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+
+
+
+
+@media(max-width:768px){
+    .row{padding-top: 7rem;}
+    
+    .Input_Div{height: 4.5rem!important;padding: .7rem 1%!important;}
+    .Todo_input{width: 83%;margin-right: 2%; font-size: 1.4rem;height: 3.1rem!important;}
+    .Add_btn{height: 1.5rem!important;}
+    .Image_Todolist{width: 35px;height: 35px;}
+    .Todo_List p{font-size: 1.4rem;}
+    .edit_btn{font-size: 1.4rem;}
+    .delete_btn{font-size: 1.4rem;}
+    }
